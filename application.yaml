@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://github.com/hungryengineer/GitOps.git
     targetRevision: HEAD
-    path: master
+    path: GitOps
   destination:
     server: https://kubernetes.default.svc
     namespace: myapp
