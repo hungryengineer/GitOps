@@ -1,22 +1,22 @@
-apiVersion: argoproj.io/vialpha1
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: myapp-argo-application
   namespace: argocd
 spec:
   project: default
-source:
-  repoURL: https://github.com/hungryengineer/GitOps
-  targetRevision: HEAD
-  path: master
-destination:
-  server: https://kubernetes.default.svc
-  namespace: myapp
+  source:
+    repoURL: https://github.com/hungryengineer/GitOps
+    targetRevision: HEAD
+    path: master
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: myapp
 
-syncPolicy:
-  syncOptions:
-  - CreateNamespace=true
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
 
-  automated:
-    selfHeal: true
-    prune: true
+    automated:
+      selfHeal: true
+      prune: true
