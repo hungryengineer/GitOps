@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/hungryengineer/GitOps
+    repoURL: https://github.com/hungryengineer/GitOps.git
     targetRevision: HEAD
     path: master
   destination:
