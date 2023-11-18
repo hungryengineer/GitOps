@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Deployment
+metadata:
+  name: GitOps-test
+spec:
+  selector:
+    matchLabels:
+      app: my-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: myapp
+      image: nanajanashia/argocd-app:1.0
+      ports:
+      - containerPort: 8080
+
