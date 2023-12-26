@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app.kubernetes.io/instance: myapp-argo-application
-  name: myapp-deployment
+  name: myapp-deployment1
   namespace: myapp
 spec:
   replicas: 2
